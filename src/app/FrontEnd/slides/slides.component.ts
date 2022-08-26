@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Slide } from '../models/slide.model';
+import { Slide } from '../../BackEnd/models/slide.model';
 import { EventService } from '../../BackEnd/services/event.service';
 @Component({
   selector: 'app-slides',

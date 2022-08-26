@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
-import { Event } from '../../FrontEnd/models/event.model';
-import { event_type } from '../../FrontEnd/models/event_type.model';
-import { Slide } from '../../FrontEnd/models/slide.model';
+import { Event } from '../models/event.model';
+import { event_type } from '../models/event_type.model';
+import { Slide } from '../models/slide.model';
 @Injectable({
   providedIn: 'root'
 })

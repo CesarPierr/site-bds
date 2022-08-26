@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Card } from '../models/card.model';
+import { Card } from '../../BackEnd/models/card.model';
 @Component({
   selector: 'app-card-list',
   templateUrl: './card-list.component.html',
