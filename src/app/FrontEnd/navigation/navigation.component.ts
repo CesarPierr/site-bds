@@ -6,10 +6,9 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./navigation.component.scss']
 })
 export class NavigationComponent implements OnInit {
-
+  isAuth=false;
   constructor() { }
 
   ngOnInit(): void {
   }
-
 }

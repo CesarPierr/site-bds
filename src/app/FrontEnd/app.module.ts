@@ -8,6 +8,8 @@ import { SlidesComponent } from './slides/slides.component';
 import { FrontpageComponent } from './frontpage/frontpage.component';
 import { CardListComponent } from './card-list/card-list.component';
 import { FooterComponent } from './footer/footer.component';
+import { SlideComponent } from './slide/slide.component';
+import { CardComponent } from './card/card.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +18,9 @@ import { FooterComponent } from './footer/footer.component';
     SlidesComponent,
     FrontpageComponent,
     CardListComponent,
-    FooterComponent
+    FooterComponent,
+    SlideComponent,
+    CardComponent
   ],
   imports: [
     BrowserModule,
