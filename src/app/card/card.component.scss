@@ -1,0 +1,19 @@
+img {
+  object-fit:cover;
+  object-position: center;
+  width : 60vmax;
+  height : 30vmax;
+  min-width: 10vmax;
+  overflow: hidden;
+}
+
+.card-body {
+  width: 30vmax;
+}
+
+.card-title
+{
+  text-align: center;
+  font-family: title;
+  font-size: 200%;
+}

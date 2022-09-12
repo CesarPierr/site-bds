@@ -1,0 +1,5 @@
+<div id="carousel" class="carousel slide" data-bs-ride="carousel" data-pause="false">
+  <div class="carousel-inner">
+    <app-slide *ngFor="let slide of images; let index = index" [slide]="slide" [index]="index"></app-slide>
+  </div>
+</div>

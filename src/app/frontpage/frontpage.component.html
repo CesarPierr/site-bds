@@ -1,0 +1,47 @@
+<div class="filigram"></div>
+<app-slides class="slides" [images] = "lImages"></app-slides>
+<div class="presentation">
+  <img src="assets/logoBDS.png" class="logo"/>
+  <h1>
+    Bienvenue sur le site du Bureau Des Sports de l'ENSTA Paris
+  </h1>
+  <button type="button" class="goto btn btn-outline-light p-3 mx-1 mx-sm-4 mt-3"><a class= "nav-link" href = "#assocs">Associations</a></button>
+  <button type="button" class="goto btn btn-outline-light p-3 mx-1 mx-sm-4 mt-3"><a class= "nav-link" href = "#sports">Sports</a></button>
+  <button type="button" class="goto btn btn-outline-light p-3 mx-1 mx-sm-4 mt-3"><a class= "nav-link" href = "#tournois">Tournois</a></button>
+
+</div>
+<ul class="list-group bg-none pb-5 rounded-5">
+  <li class="list-group-item assos bg-dark rounded-5 space-bot" id="assocs">
+    <div class="container align-items-center">
+      <h2 class="center">Nos sous-sections</h2>
+    </div>
+    <app-card-list [l_cards]="lAssos"></app-card-list>
+    <div class="container align-items-center">
+      <h2 class="center">
+      <a class="btn btn-outline-light center" routerLink="all-assos" routerLinkActive="active">Voir toutes les ss-sections</a>
+      </h2>
+    </div>
+  </li>
+  <li class="list-group-item sports bg-dark rounded-5 space-bot" id="sports">
+    <div class="container align-items-center">
+      <h2 class="center ">Les sports</h2>
+    </div>
+    <app-card-list [l_cards]="lSports"></app-card-list>
+    <div class="container align-items-center">
+      <h2 class="center">
+        <a class="btn btn-outline-light center" routerLink="all-sports" routerLinkActive="active">Voir tous les Sports</a>
+      </h2>
+    </div>
+  </li>
+  <li class="list-group-item tournois bg-dark rounded-5" id="tournois">
+    <div class="container align-items-center">
+      <h2 class="center">Les Tournois</h2>
+    </div>
+    <app-card-list [l_cards]="lTournois"></app-card-list>
+    <div class="container align-items-center">
+      <h2 class="center">
+      <a class="btn btn-outline-light center" routerLink="all-tournois" routerLinkActive="active">Voir tous les tournois</a>
+      </h2>
+    </div>
+  </li>
+</ul>

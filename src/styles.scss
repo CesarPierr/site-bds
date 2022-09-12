@@ -1,1 +1,11 @@
 /* You can add global styles to this file, and also import other style files */
+@font-face {
+  font-family: "SPORT";
+  src: local("Sport"), url(./assets/fonts/BlackOpsOne-Regular.ttf) format("truetype");
+}
+
+/* You can add global styles to this file, and also import other style files */
+@font-face {
+  font-family: "title";
+  src: local("title"), url(./assets/fonts/ArchivoBlack-Regular.ttf) format("truetype");
+}

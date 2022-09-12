@@ -1,0 +1,46 @@
+
+img {
+  object-fit:cover;
+  object-position: center;
+  width : 60vmax;
+  height : 25vmax;
+  min-width: 10vmax;
+  overflow: hidden;
+  border-radius: 20px;
+}
+
+.underline {
+  text-underline-offset: 1;
+}
+
+.card-title
+{
+  text-align: center;
+  font-family: title;
+  font-size: 200%;
+}
+
+.card-text
+{
+  font-style: italic;
+  font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-size: calc(8px + 1vmax);
+  text-align: center;
+  .btn {
+    font-style:normal;
+    font-weight: bold;
+    font-size: large;
+  }
+}
+.row, .container, .card {
+  background-color: none;
+}
+
+.card-body {
+  max-height: 25vmax;
+  background-color: none;
+}
+
+* {
+  color: white;
+}

@@ -1,0 +1,65 @@
+.list-group-item {
+  padding : 5px;
+}
+
+.filigram {
+  background-color: rgba(0, 0, 0, 0.562);
+  height: 100vh;
+  position: fixed;
+  z-index: -400;
+  width: 100%;
+}
+.presentation  {
+  color:white;
+  vertical-align: center;
+  text-align: center;
+  height: 100vh;
+}
+.goto {
+  border-width: 2px;
+  font-size: large;
+  font-weight: bold;
+}
+.slides {
+  z-index: 100;
+}
+
+.logo {
+  object-fit:cover;
+  object-position: center;
+  height : 40vmax;
+  max-width: 50vmax;
+  margin-top: 5vh;
+}
+
+.center {
+  text-align: center;
+}
+
+h2 {
+  margin: 3%;
+  font-size:400%;
+  color: white;
+  font-family: SPORT;
+}
+
+
+.space-bot {
+  margin-bottom : 80vmin;
+
+}
+
+li .last {
+  margin-bottom: 0 ;
+}
+
+
+
+
+.btn-outline-light {
+  padding: 2vmin;
+  font-size: 2vmin;
+}
+
+
+
