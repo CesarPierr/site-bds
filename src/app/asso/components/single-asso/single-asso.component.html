@@ -1,0 +1,9 @@
+<div *ngIf="asso$ |async as asso">
+  <div class = "filigram"></div>
+  <img class = "background" src = {{asso.imgLink}}/>
+</div>
+
+<div *ngIf="asso$ |async as asso"class = "content container ">
+  <h1>{{asso.title}}</h1>
+  <app-inside [card]="asso"></app-inside>
+</div>

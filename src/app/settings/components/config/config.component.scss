@@ -1,0 +1,13 @@
+.fit {
+  object-fit: cover;
+  object-fit: center;
+  overflow: hidden;
+  height: 25vmax;;
+  width: 100%;
+}
+
+.card-img-overlay
+{
+  background-color: rgba(13, 73, 13, 0.466);
+  color: white;
+}

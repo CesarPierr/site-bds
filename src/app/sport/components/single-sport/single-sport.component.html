@@ -1,0 +1,9 @@
+<div *ngIf="sport$ |async as sport">
+  <div class = "filigram"></div>
+  <img class = "background" src = {{sport.imgLink}}/>
+</div>
+
+<div *ngIf="sport$ |async as sport" class = "content container ">
+  <h1>{{sport.title}}</h1>
+  <app-inside [card]="sport"></app-inside>
+</div>

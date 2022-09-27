@@ -1,0 +1,17 @@
+<div class="text-center container-fluid bg-none">
+  <!-- Stack the columns on mobile by making one full-width and the other half-width -->
+  <div class="row ">
+    <div *ngFor="let card of Cards$ | async" (click)="clickFunction(card.id)" class="col-sm-6">
+      <div  class="card text-bg-dark m-3 border-0 zoom">
+        <img src={{card.imgLink}} class="card-img" alt="oo">
+        <div class="filigram opacity-50"></div>
+        <div class="card-img-overlay">
+          <h5 class="card-title">{{card.title}}</h5>
+          <p class="card-text">{{card.description}}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+

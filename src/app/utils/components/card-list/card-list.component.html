@@ -1,0 +1,41 @@
+
+<
+<div class="container m0 px-0 ">
+  <div *ngFor="let card of l_cards$ | async; let index = index"  class="row outlined ">
+    <div *ngIf="index%2 == 0 and index < 3"class="card mb-2">
+      <div class="row bg-dark p-3" >
+        <div class="col-md-7 p-0">
+          <img src={{card.imgLink}} class="img-fluid" alt="..." />
+        </div>
+        <div class="col-md-5">
+          <div class="card-body px-lg-5">
+            <h3 class="card-title underline mb-xl-5">{{card.title}}</h3>
+            <p class="card-text ">
+              {{(card.description | slice:0:100) + '..'}}
+            </p>
+            <p class="card-text"><button (click)="onViewCard(card.id)" class="btn btn-info btn-outline-light px-5 mt-xl-5">Voir</button></p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div *ngIf="index == 1" class="row outlined">
+      <div class="card my-5">
+        <div class="row bg-dark p-3">
+          <div class="col-md-5 order-last order-md-first ">
+            <div class="card-body px-lg-5">
+              <h3 class="card-title mb-xl-5">{{card.title}}</h3>
+              <p class="card-text">
+                {{(card.description| slice:0:100) + '..'}}
+              </p>
+              <p class="card-text"><button (click)="onViewCard(card.id)" class="btn btn-info btn-outline-light px-5 mt-xl-5">Voir</button></p>
+            </div>
+          </div>
+
+          <div class="col-md-7 p-0 order-first order-md-last">
+            <img src={{card.imgLink}} class="img-fluid" alt="..." />
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>

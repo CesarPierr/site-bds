@@ -1,58 +1,46 @@
-import { NgModule } from '@angular/core';
+import { LOCALE_ID, NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
+import { HttpClientModule} from '@angular/common/http'
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { NavigationComponent } from './navigation/navigation.component';
-import { SlidesComponent } from './slides/slides.component';
 import { FrontpageComponent } from './frontpage/frontpage.component';
-import { CardListComponent } from './card-list/card-list.component';
-import { FooterComponent } from './footer/footer.component';
-import { SlideComponent } from './slide/slide.component';
-import { CardComponent } from './card/card.component';
-import { SingleAssoComponent } from './single-asso/single-asso.component';
-import { SingleEventComponent } from './single-event/single-event.component';
-import { SingleTournoiComponent } from './single-tournoi/single-tournoi.component';
-import { SingleSportComponent } from './single-sport/single-sport.component';
-import { AllSportsComponent } from './all-sports/all-sports.component';
-import { AllAssosComponent } from './all-assos/all-assos.component';
-import { AllTournoisComponent } from './all-tournois/all-tournois.component';
-import { AllEventsComponent } from './all-events/all-events.component';
-import { CardGridComponent } from './card-grid/card-grid.component';
-import { ConfigComponent } from './config/config.component';
-import { ConnectComponent } from './connect/connect.component';
-import { AllTeamsComponent } from './all-teams/all-teams.component';
-import { TeamComponent } from './team/team.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { CoreModule } from './core/core.module';
+import { UtilsModule } from './utils/utils.module';
+import { TournoiModule } from './tournoi/tournoi.module';
+import { SportModule } from './sport/sport.module';
+import { AssoModule } from './asso/asso.module';
+import { EventModule } from './event/event.module';
+import { TeamModule } from './team/team.module';
+import { SettingsModule } from './settings/settings.module';
+import { AuthentificationModule } from './authentification/authentification.module';
 
 @NgModule({
   declarations: [
     AppComponent,
-    NavigationComponent,
-    SlidesComponent,
     FrontpageComponent,
-    CardListComponent,
-    FooterComponent,
-    SlideComponent,
-    CardComponent,
-    SingleAssoComponent,
-    SingleEventComponent,
-    SingleTournoiComponent,
-    SingleSportComponent,
-    AllSportsComponent,
-    AllAssosComponent,
-    AllTournoisComponent,
-    AllEventsComponent,
-    CardGridComponent,
-    ConfigComponent,
-    ConnectComponent,
-    AllTeamsComponent,
-    TeamComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule,
+    ReactiveFormsModule,
+    HttpClientModule,
+    CoreModule,
+    UtilsModule,
+    SportModule,
+    AssoModule,
+    EventModule,
+    TeamModule,
+    SettingsModule,
+    AuthentificationModule
   ],
-  providers: [],
+  providers: [
+    {provide : LOCALE_ID, useValue:'fr-FR'},
+  ],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {
+  constructor() {
+  }
+ }

@@ -1,0 +1,63 @@
+<div *ngIf="rights == 'admin'" class="bg-light">
+  <div class="container bg-light">
+    <div class="col-md-12 text-center">
+      <button class="btn btn-primary m-5" type="button" data-bs-toggle="collapse" data-bs-target="#collapseAdmin" aria-expanded="false" aria-controls="collapseExample">
+        Reglages de base
+      </button>
+    </div>
+  </div>
+  <form class ="mt-5 collapse" id= "collapseAdmin" [formGroup]="globalForm">
+    <div class="container">
+      <div *ngIf="cfg$ | async as cfg" class="row g-2">
+        <div class="col-md-6">
+          <div class="form-floating">
+            <input type="url" formControlName="facebookLink" class="form-control" id="facebookLink" value={{cfg.facebookLink}}>
+            <label for="facebookLink">Facebook</label>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="form-floating">
+            <input type="url" formControlName="instaLink" class="form-control" id="instaLink" value={{cfg.instaLink}}>
+            <label for="instaLink">Instagram</label>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="form-floating">
+            <input type="url" formControlName="linkedinLink"class="form-control" id="linkedinLink" value={{cfg.linkedinLink}}>
+            <label for="linkedinLink">Linkedin</label>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="form-floating">
+            <input type="email" formControlName="mail"class="form-control" id="mail" value={{cfg.mail}}>
+            <label for="mail">Email BDS</label>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <img src={{cfg.logoLink}} class ="img-thumbnail bg-dark">
+        </div>
+        <div class="col-md-6 mt-md-5">
+          <div class="mb-3">
+            <h3>Logo</h3>
+            <label for="formFile" class="form-label mt-md-5">logo file</label>
+            <input class="form-control" formControlName="logoLink" type="file" id="formFile">
+          </div>
+        </div>
+        <h2 class="mt-3"> Séléction des images du diapo principale</h2>
+        <div class="row">
+          <div *ngFor="let item of events$ | async" class="col-sm-4 p-0 ">
+            <div class="card text-bg-dark border-0">
+              <button class = "btn bg-white p-0" (click) = "onClick(item.id)">
+                <img src={{item.imgLink}} class="card-img fit" alt="...">
+                <div *ngIf="cfg.mainImagesIds.includes(item.id)" class="card-img-overlay">
+                  <h5  class="card-title">Selectionnée</h5>
+                </div>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <button type="submit" class="btn btn-primary mt-5" (click) ="onSubmitForm()" data-bs-toggle="collapse" data-bs-target="#collapseAdmin" aria-expanded="false" aria-controls="collapseExample">Appliquer les changements</button>
+    </div>
+  </form>
+</div>
