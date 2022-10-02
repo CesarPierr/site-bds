@@ -8,7 +8,7 @@ img {
   object-fit: cover;
   object-fit: center;
   overflow: hidden;
-  height: 40vmax;;
+  height: 32vmax;
   width: 100%;
 }
 
@@ -18,4 +18,10 @@ button {
   justify-content: center;
   font-size: large;
   font-weight: bold;
+}
+
+@media (min-width: 1140px) {
+  .diapo {
+    border-right: 2px solid white;
+  }
 }

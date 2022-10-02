@@ -3,7 +3,7 @@
   <img class = "background" src = {{tournoi.imgLink}}/>
 </div>
 
-<div *ngIf="tournoi$ |async as tournoi" class = "content container ">
-  <h1>{{tournoi.title}}</h1>
+<div *ngIf="tournoi$ |async as tournoi" class = "row p-5">
+  <h1 >{{tournoi.title}}</h1>
   <app-inside [card]="tournoi"></app-inside>
 </div>

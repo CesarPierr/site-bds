@@ -29,14 +29,9 @@ export class ConfigService {
     return ret
   }
 
-  changeId(id:number) : Observable<Cfg> {
+  changeCfg(newCfg : Cfg) : Observable<Cfg> {
     const ret = this.getConfig().pipe(
-      tap(cfg => console.log('Count: ', id)),
-      map(cfg => ({
-          ...cfg,
-          mainImagesIds: (cfg.mainImagesIds.includes(id) ? cfg.mainImagesIds.filter((value) => value != id) : this.add(cfg.mainImagesIds,id))
-      })),
-      tap(cfg => console.log('Count: ', cfg.mainImagesIds)),
+      map(_ => newCfg),
       switchMap(updatedCfg => this.http.put<Cfg>(
           `http://localhost:3000/Cfg`,
           updatedCfg)

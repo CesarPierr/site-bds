@@ -1,31 +1,32 @@
-<div class="container">
-  <div *ngIf="card.imgLinks;" class = "mt-5">
-    <div id="carousel" class="carousel slide" data-bs-ride="carousel">
-      <div class="carousel-inner">
-        <div *ngFor="let img of card.imgLinks; let index = index" >
-          <div *ngIf="index == 0" class="carousel-item active ">
-            <img src={{img}} class="d-block w-100 rounded-5" alt="...">
-          </div>
-          <div *ngIf="index != 0" class="carousel-item rounded-5">
-            <img src={{img}} class="d-block w-100 rounded-5" alt="...">
+<div class="container-fluid col-md-12">
+  <div class="row p-0 m-0">
+    <div *ngIf="card.imgLinks;" class = "diapo mt-5 ms-auto col-xl-8  pe-xl-5">
+      <div id="carousel" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-inner">
+          <div *ngFor="let img of card.imgLinks; let index = index" >
+            <div *ngIf="index == 0" class="carousel-item active ">
+              <img src={{img}} class="d-block w-100 rounded-5" alt="...">
+            </div>
+            <div *ngIf="index != 0" class="carousel-item rounded-5">
+              <img src={{img}} class="d-block w-100 rounded-5" alt="...">
+            </div>
           </div>
         </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carousel" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
       </div>
-      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
-        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-        <span class="visually-hidden">Previous</span>
-      </button>
-      <button class="carousel-control-next" type="button" data-bs-target="#carousel" data-bs-slide="next">
-        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-        <span class="visually-hidden">Next</span>
-      </button>
+    </div>
+    <div class="col-xl-4 border-5 me-auto border-white">
+      <p class="description text-white pt-5 mt-xl-5">{{printAll ? (card.description) : ((card.description | slice:0:200) + "...")}}</p>
+      <div class="text-center">
+        <button *ngIf="card.description.length > 500" type="button" class="btn btn-outline-light p-3 mx-1 mx-xl-4 mt-3" (click) = "wholeText()">{{buttonText}}</button>
+      </div>
     </div>
   </div>
-
-  <p class="description text-white mt-5">{{printAll ? (card.description) : ((card.description | slice:0:300) + "...")}}</p>
-  <div class="text-center">
-    <button *ngIf="card.description.length > 500" type="button" class="btn btn-outline-light p-3 mx-1 mx-sm-4 mt-3" (click) = "wholeText()">{{buttonText}}</button>
-  </div>
-
-
 </div>

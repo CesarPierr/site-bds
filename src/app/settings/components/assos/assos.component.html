@@ -1,0 +1,80 @@
+
+    <form  [formGroup]="assoForm">
+      <div class="container">
+        <div *ngIf="asso as asso" class="row g-2">
+
+          <div class="col-md-12">
+            <div class="form-floating">
+              <label for="title">Nom de l'asso</label>
+              <textarea class="form-control" id="title" rows="1" value={{asso.title}}></textarea>
+            </div>
+          </div>
+
+          <div class="col-md-12">
+            <div class="form-floating">
+              <label for="description">Description</label>
+              <textarea class="form-control" id="description" rows="3" value={{asso.description}}></textarea>
+            </div>
+          </div>
+
+          <div class="col-md-6">
+            <img src={{asso.imgLink}} class ="img-thumbnail bg-dark">
+          </div>
+          <div class="col-md-6 mt-md-5">
+            <div class="mb-3">
+              <h3>Image Principale</h3>
+              <label for="formFile" class="form-label mt-md-5">main image file</label>
+              <input class="form-control" formControlName="imgLink" type="file" id="formFile">
+            </div>
+          </div>
+
+          <div class="col-md-6">
+            <img src={{asso.logoLink}} class ="img-thumbnail bg-dark">
+          </div>
+          <div class="col-md-6 mt-md-5">
+            <div class="mb-3">
+              <h3>Logo</h3>
+              <label for="formFile" class="form-label mt-md-5">logo file</label>
+              <input class="form-control" formControlName="logoLink" type="file" id="formFile">
+            </div>
+          </div>
+
+          <div class="col-md-6">
+            <div class="form-floating">
+              <input type="url" formControlName="facebookLink"class="form-control" id="facebookLink" value={{asso.facebookLink}}>
+              <label for="facebookLink">Facebook</label>
+            </div>
+          </div>
+
+          <div class="col-md-6">
+            <div class="form-floating">
+              <input type="url" formControlName="instaLink"class="form-control" id="instaLink" value={{asso.instaLink}}>
+              <label for="instaLink">Instagram</label>
+            </div>
+          </div>
+
+          <div class="col-md-6">
+            <div class="form-floating">
+              <input type="email" formControlName="mailLink"class="form-control" id="mailLink" value={{asso.mailLink}}>
+              <label for="mailLink">Email de {{asso.title}}</label>
+            </div>
+          </div>
+
+          <div class="col-md-6">
+            <div class="form-floating">
+              <input type="url" formControlName="linkedinLink"class="form-control" id="linkedinLink" value={{asso.linkedinLink}}>
+              <label for="linkedinLink">Linkedin</label>
+            </div>
+          </div>
+
+          <div class="col-md-12">
+            <div class="form-floating">
+              <input type="url" formControlName="websiteLink"class="form-control" id="websiteLink" value={{asso.websiteLink}}>
+              <label for="websiteLink">site Web</label>
+            </div>
+          </div>
+        </div>
+        <button type="submit" class="btn btn-primary mt-5" (click) ="onSubmitForm()" data-bs-toggle="collapse" data-bs-target="#collapseAdmin" aria-expanded="false" aria-controls="collapseExample">Appliquer les changements</button>
+      </div>
+    </form>
+

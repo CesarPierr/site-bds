@@ -3,8 +3,10 @@ export class Assos {
   title!:string;
   description!:string;
   imgLink!:string;
-  linkedEventsId!:[number] | null;
+  userId!:string;
+  linkedEventsId!:number[] | null;
   imgLinks?:string[];
+  
   logoLink?:string;
   facebookLink?:string;
   instaLink?:string;

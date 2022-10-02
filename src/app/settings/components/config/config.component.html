@@ -49,7 +49,7 @@
             <div class="card text-bg-dark border-0">
               <button class = "btn bg-white p-0" (click) = "onClick(item.id)">
                 <img src={{item.imgLink}} class="card-img fit" alt="...">
-                <div *ngIf="cfg.mainImagesIds.includes(item.id)" class="card-img-overlay">
+                <div *ngIf="selected.includes(item.id)" class="card-img-overlay">
                   <h5  class="card-title">Selectionnée</h5>
                 </div>
               </button>
@@ -60,4 +60,27 @@
       <button type="submit" class="btn btn-primary mt-5" (click) ="onSubmitForm()" data-bs-toggle="collapse" data-bs-target="#collapseAdmin" aria-expanded="false" aria-controls="collapseExample">Appliquer les changements</button>
     </div>
   </form>
+</div>
+<div class="bg-light">
+  <div class="container bg-light">
+    <div class="col-md-12 text-center">
+      <button class="btn btn-primary m-5" type="button" data-bs-toggle="collapse" data-bs-target="#collapseAssos" aria-expanded="false" aria-controls="collapseExample">
+        Gestion des associations
+      </button>
+    </div>
+  </div>
+  <div *ngIf="rights=='admin'"class ="mt-5 collapse" id= "collapseAssos" >
+    <div class="dropdown container">
+      <a class="btn dropdown-toggle col-md-12 text-center" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+        Choix de l'association
+      </a>
+      <ul  class="dropdown-menu">
+        <li *ngFor="let item of assos">
+          <a class="dropdown-item col-md-12 text-center" (click)="onSelectAsso(item)">{{item.title}}</a>
+        </li>
+      </ul>
+    </div>
+    <app-assos *ngIf="this.selectedAsso != null" [asso]="this.selectedAsso"></app-assos>
+
+  </div>
 </div>

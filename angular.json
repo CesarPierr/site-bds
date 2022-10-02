@@ -129,5 +129,8 @@
       }
     }
   },
-  "defaultProject": "site_bds"
+  "defaultProject": "site_bds",
+  "cli": {
+    "analytics": false
+  }
 }

@@ -4,12 +4,14 @@ import { ConfigComponent } from './components/config/config.component';
 import { RouterModule } from '@angular/router';
 import { UtilsModule } from '../utils/utils.module';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { AssosComponent } from './components/assos/assos.component';
 
 
 
 @NgModule({
   declarations: [
-    ConfigComponent
+    ConfigComponent,
+    AssosComponent
 
   ],
   imports: [

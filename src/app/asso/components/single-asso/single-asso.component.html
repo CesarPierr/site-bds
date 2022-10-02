@@ -3,7 +3,18 @@
   <img class = "background" src = {{asso.imgLink}}/>
 </div>
 
-<div *ngIf="asso$ |async as asso"class = "content container ">
-  <h1>{{asso.title}}</h1>
+<div *ngIf="asso$ |async as asso"class = "row p-5">
+  <div class="row border-bottom pb-4 mb-5">
+    <!-- <div class="col-xl-3 col-3">
+      <img class="logo float-end rounded-3"src={{asso.logoLink}}/>
+    </div> -->
+    <div class="col-9">
+      <h1 class="text-start text-start ms-5">{{asso.title}}</h1>
+    </div>
+    <div class="col-3">
+      <img class="logo float-end bg-white rounded-3"src={{asso.logoLink}}/>
+    </div>
+  </div>
   <app-inside [card]="asso"></app-inside>
+  
 </div>

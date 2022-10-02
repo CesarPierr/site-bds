@@ -14,8 +14,11 @@ export class InsideComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
-    this.printAll = this.card.description.length < 300
+    this.printAll = this.card.description.length < 200
     this.buttonText = this.printAll ? "voir moins" : "voir plus";
+    if (!this.card.imgLinks || this.card.imgLinks.length === 0) {
+      this.card.imgLinks = [this.card.imgLink];
+    }
   }
 
   wholeText() : void {

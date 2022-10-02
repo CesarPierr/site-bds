@@ -1,4 +1,4 @@
-img {
+.background {
   position: fixed;
   z-index: -200;
   object-position: center;
@@ -22,5 +22,14 @@ h1 {
   font-family: SPORT;
   color: white;
   text-align: center;
-  font-size: 5vmax;
+  font-size: 10vmin;
+
 }
+
+.logo {
+  width:11vmin;
+  height: 11vmin;
+  z-index: 100;
+  object-fit: cover;
+}
+

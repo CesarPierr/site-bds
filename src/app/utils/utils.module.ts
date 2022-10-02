@@ -8,6 +8,7 @@ import { InsideComponent } from './components/inside/inside.component';
 import { SlideComponent } from './components/slide/slide.component';
 import { SlidesComponent } from './components/slides/slides.component';
 import { EventPresentationComponent } from './components/event-presentation/event-presentation.component';
+import { EventTimelineComponent } from './components/event-timeline/event-timeline.component';
 
 
 
@@ -19,7 +20,8 @@ import { EventPresentationComponent } from './components/event-presentation/even
     InsideComponent,
     SlideComponent,
     SlidesComponent,
-    EventPresentationComponent
+    EventPresentationComponent,
+    EventTimelineComponent,
   ],
   imports: [
     CommonModule,
@@ -32,6 +34,7 @@ import { EventPresentationComponent } from './components/event-presentation/even
     InsideComponent,
     SlideComponent,
     SlidesComponent,
+    EventTimelineComponent
   ]
 })
 export class UtilsModule { }

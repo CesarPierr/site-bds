@@ -3,7 +3,7 @@
   <img class = "background" src = {{sport.imgLink}}/>
 </div>
 
-<div *ngIf="sport$ |async as sport" class = "content container ">
+<div *ngIf="sport$ |async as sport" class = "row p-5">
   <h1>{{sport.title}}</h1>
   <app-inside [card]="sport"></app-inside>
 </div>

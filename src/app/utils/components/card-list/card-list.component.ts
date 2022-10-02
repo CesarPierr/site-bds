@@ -16,7 +16,7 @@ export class CardListComponent implements OnInit {
   ngOnInit(): void {
   }
   onViewCard(id:number) : void{
-    this.router.navigateByUrl(`single-${this.base_link}/${id}`);
+    this.router.navigateByUrl(`${this.base_link}/${id}`);
   }
 }
 
