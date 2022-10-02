@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormGroup, FormBuilder, Validators, FormArray, FormControl } from '@angular/forms';
+import { UntypedFormGroup, UntypedFormBuilder, Validators, FormArray, FormControl } from '@angular/forms';
 import { first, last, map, Observable } from 'rxjs';
 import { Assos } from 'src/app/core/models/assos.model';
 import { AssoService } from 'src/app/core/services/asso.service';
@@ -17,13 +17,13 @@ import { EventService } from '../../../core/services/event.service';
 export class ConfigComponent implements OnInit {
 
   rights !: string;
-  globalForm!:FormGroup;
+  globalForm!:UntypedFormGroup;
   selected!:number[];
   cfg$!: Observable<Cfg>;
   events$!:Observable<Event[]>;
   assos!:Assos[];
   selectedAsso!: Assos|null;
-  constructor(private fb : FormBuilder, private cfgService : ConfigService, private eventService : EventService, private assoService : AssoService) {}
+  constructor(private fb : UntypedFormBuilder, private cfgService : ConfigService, private eventService : EventService, private assoService : AssoService) {}
 
   ngOnInit(): void {
     this.rights = 'admin';

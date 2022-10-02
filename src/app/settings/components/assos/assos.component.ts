@@ -1,5 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { UntypedFormBuilder, UntypedFormGroup, Validators } from '@angular/forms';
 import { last, map, Observable } from 'rxjs';
 import { Assos } from 'src/app/core/models/assos.model';
 import { Event } from 'src/app/core/models/event.model';
@@ -13,11 +13,11 @@ import { EventService } from '../../../core/services/event.service';
 })
 export class AssosComponent implements OnInit {
 
-  assoForm!:FormGroup;
+  assoForm!:UntypedFormGroup;
   events$!:Observable<Event[]| null>;
   imgs : String[] = [];
   @Input() asso! : Assos;
-  constructor(private fb : FormBuilder, private assoService : AssoService, private eventService : EventService) {}
+  constructor(private fb : UntypedFormBuilder, private assoService : AssoService, private eventService : EventService) {}
 
   ngOnInit(): void {
     this.events$ = this.eventService.getbyIds(this.asso.linkedEventsId?this.asso.linkedEventsId:[]);
